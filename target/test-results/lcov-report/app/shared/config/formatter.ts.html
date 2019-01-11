@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/shared/config/formatter.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">app/shared/config</a> formatter.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.94% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>8/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">11.94% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>8/67</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function <span class="fstat-no" title="function not covered" >warn(</span>msg: string, err?: Error) {
+<span class="cstat-no" title="statement not covered" >  if (typeof console !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >    console.warn('[vue-i18n] ' + msg);</span>
+<span class="cstat-no" title="statement not covered" >    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >      console.warn(err.stack);</span>
+    }
+  }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >isObject(</span>obj: any): boolean {
+<span class="cstat-no" title="statement not covered" >  return obj !== null &amp;&amp; typeof obj === 'object';</span>
+}
+&nbsp;
+type Token = {
+  type: 'text' | 'named' | 'list' | 'unknown';
+  value: string;
+};
+&nbsp;
+const RE_TOKEN_LIST_VALUE = /^(?:\d)+/;
+const RE_TOKEN_NAMED_VALUE = /^(?:\w)+/;
+&nbsp;
+// as we can't extend the default vue-i18n BaseFormatter we create a own copy of that class with required changes
+export default class JhiFormatter {
+  private caches: { [key: string]: Array&lt;Token&gt; };
+  private leftBraces: RegExp;
+  private rightBraces: RegExp;
+&nbsp;
+  constructor() {
+    this.caches = Object.create(null);
+    this.leftBraces = new RegExp('{{ |{{', 'g');
+    this.rightBraces = new RegExp(' }}|}}', 'g');
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  interpolate(</span>message: string, values: any): Array&lt;any&gt; {
+<span class="cstat-no" title="statement not covered" >    if (!values) {</span>
+<span class="cstat-no" title="statement not covered" >      return [message];</span>
+    }
+    // this is custom jhipster logic such that we can reuse the i18n json files for vue-i18n
+    // replace '{{' with '{' and '{{ ' with '{' and same for '}}'
+<span class="cstat-no" title="statement not covered" >    message = message.replace(this.leftBraces, '{').replace(this.rightBraces, '}');</span>
+&nbsp;
+    let tokens: Array&lt;Token&gt; = <span class="cstat-no" title="statement not covered" >this.caches[message];</span>
+<span class="cstat-no" title="statement not covered" >    if (!tokens) {</span>
+<span class="cstat-no" title="statement not covered" >      tokens = parse(message);</span>
+<span class="cstat-no" title="statement not covered" >      this.caches[message] = tokens;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return compile(tokens, values);</span>
+  }
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >parse(</span>format: string): Array&lt;Token&gt; {
+  const tokens = <span class="cstat-no" title="statement not covered" >[];</span>
+  let position = <span class="cstat-no" title="statement not covered" >0;</span>
+&nbsp;
+  let text = <span class="cstat-no" title="statement not covered" >'';</span>
+<span class="cstat-no" title="statement not covered" >  while (position &lt; format.length) {</span>
+    let char = <span class="cstat-no" title="statement not covered" >format[position++];</span>
+<span class="cstat-no" title="statement not covered" >    if (char === '{') {</span>
+<span class="cstat-no" title="statement not covered" >      if (text) {</span>
+<span class="cstat-no" title="statement not covered" >        tokens.push({ type: 'text', value: text });</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      text = '';</span>
+      let sub = <span class="cstat-no" title="statement not covered" >'';</span>
+<span class="cstat-no" title="statement not covered" >      char = format[position++];</span>
+<span class="cstat-no" title="statement not covered" >      while (char !== undefined &amp;&amp; char !== '}') {</span>
+<span class="cstat-no" title="statement not covered" >        sub += char;</span>
+<span class="cstat-no" title="statement not covered" >        char = format[position++];</span>
+      }
+      const isClosed = <span class="cstat-no" title="statement not covered" >char === '}';</span>
+&nbsp;
+      const _type = <span class="cstat-no" title="statement not covered" >RE_TOKEN_LIST_VALUE.test(sub) ? 'list' : isClosed &amp;&amp; RE_TOKEN_NAMED_VALUE.test(sub) ? 'named' : 'unknown';</span>
+<span class="cstat-no" title="statement not covered" >      tokens.push({ value: sub, type: _type });</span>
+    } else <span class="cstat-no" title="statement not covered" >if (char === '%') {</span>
+      // when found rails i18n syntax, skip text capture
+<span class="cstat-no" title="statement not covered" >      if (format[position] !== '{') {</span>
+<span class="cstat-no" title="statement not covered" >        text += char;</span>
+      }
+    } else {
+<span class="cstat-no" title="statement not covered" >      text += char;</span>
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (text) {</span>
+<span class="cstat-no" title="statement not covered" >    tokens.push({ type: 'text', value: text });</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return tokens;</span>
+}
+&nbsp;
+function <span class="fstat-no" title="function not covered" >compile(</span>tokens: Array&lt;Token&gt;, values: any) {
+  const compiled: Array&lt;any&gt; = <span class="cstat-no" title="statement not covered" >[];</span>
+  let index = <span class="cstat-no" title="statement not covered" >0;</span>
+&nbsp;
+  const mode: string = <span class="cstat-no" title="statement not covered" >Array.isArray(values) ? 'list' : isObject(values) ? 'named' : 'unknown';</span>
+<span class="cstat-no" title="statement not covered" >  if (mode === 'unknown') {</span>
+<span class="cstat-no" title="statement not covered" >    return compiled;</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  while (index &lt; tokens.length) {</span>
+    const token = <span class="cstat-no" title="statement not covered" >tokens[index];</span>
+<span class="cstat-no" title="statement not covered" >    switch (token.type) {</span>
+      case 'text':
+<span class="cstat-no" title="statement not covered" >        compiled.push(token.value);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 'list':
+<span class="cstat-no" title="statement not covered" >        compiled.push(values[parseInt(token.value, 10)]);</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 'named':
+<span class="cstat-no" title="statement not covered" >        if (mode === 'named') {</span>
+<span class="cstat-no" title="statement not covered" >          compiled.push(values[token.value]);</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          if (process.env.NODE_ENV !== 'production') {</span>
+<span class="cstat-no" title="statement not covered" >            warn("Type of token '" + token.type + "' and format of value '" + mode + "' don't match!");</span>
+          }
+        }
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 'unknown':
+<span class="cstat-no" title="statement not covered" >        if (process.env.NODE_ENV !== 'production') {</span>
+<span class="cstat-no" title="statement not covered" >          warn("Detect 'unknown' type of token!");</span>
+        }
+<span class="cstat-no" title="statement not covered" >        break;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    index++;</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return compiled;</span>
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 11 2019 15:12:10 GMT+0100 (heure normale d’Europe centrale)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

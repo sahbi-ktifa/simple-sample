@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/shared/config/config.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">app/shared/config</a> config.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.49% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>66/82</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.48% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>66/81</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164</td><td class="line-coverage quiet"><span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Vuex from 'vuex';
+import VueI18n from 'vue-i18n';
+import JhiFormatter from './formatter';
+import setupAxiosInterceptors from '@/shared/config/axios-interceptor';
+&nbsp;
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
+import { faEye } from '@fortawesome/free-solid-svg-icons/faEye';
+import { faSync } from '@fortawesome/free-solid-svg-icons/faSync';
+import { faBan } from '@fortawesome/free-solid-svg-icons/faBan';
+import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
+import { faSave } from '@fortawesome/free-solid-svg-icons/faSave';
+import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons/faPencilAlt';
+import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
+import { faHdd } from '@fortawesome/free-solid-svg-icons/faHdd';
+import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons/faTachometerAlt';
+import { faHeart } from '@fortawesome/free-solid-svg-icons/faHeart';
+import { faList } from '@fortawesome/free-solid-svg-icons/faList';
+import { faTasks } from '@fortawesome/free-solid-svg-icons/faTasks';
+import { faBook } from '@fortawesome/free-solid-svg-icons/faBook';
+import { faClock } from '@fortawesome/free-solid-svg-icons/faClock';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons/faSignInAlt';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons/faSignOutAlt';
+import { faThList } from '@fortawesome/free-solid-svg-icons/faThList';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons/faUserPlus';
+import { faWrench } from '@fortawesome/free-solid-svg-icons/faWrench';
+import { faAsterisk } from '@fortawesome/free-solid-svg-icons/faAsterisk';
+import { faFlag } from '@fortawesome/free-solid-svg-icons/faFlag';
+import { faBell } from '@fortawesome/free-solid-svg-icons/faBell';
+import { faHome } from '@fortawesome/free-solid-svg-icons/faHome';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons/faTimesCircle';
+import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
+import { faRoad } from '@fortawesome/free-solid-svg-icons/faRoad';
+import { faCloud } from '@fortawesome/free-solid-svg-icons/faCloud';
+import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
+import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
+&nbsp;
+import VueCookie from 'vue-cookie';
+import Vuelidate from 'vuelidate';
+import Vue2Filters from 'vue2-filters';
+&nbsp;
+import * as filters from '@/shared/date/filters';
+&nbsp;
+export function initVueApp(vue) {
+  vue.use(VueCookie);
+  vue.use(Vuelidate);
+  vue.use(Vue2Filters);
+  setupAxiosInterceptors(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>console.log('Unauthorized!'))</span>;
+  filters.initFilters();
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >initFortAwesome(</span>vue) {
+<span class="cstat-no" title="statement not covered" >  library.add(</span>
+    faSort,
+    faEye,
+    faSync,
+    faBan,
+    faTrash,
+    faArrowLeft,
+    faSave,
+    faPlus,
+    faPencilAlt,
+    faUser,
+    faTachometerAlt,
+    faHeart,
+    faList,
+    faTasks,
+    faBook,
+    faHdd,
+    faClock,
+    faSignInAlt,
+    faSignOutAlt,
+    faWrench,
+    faThList,
+    faUserPlus,
+    faAsterisk,
+    faFlag,
+    faBell,
+    faHome,
+    faRoad,
+    faCloud,
+    faTimesCircle,
+    faSearch,
+    faBars,
+    faTimes
+  );
+}
+&nbsp;
+export function initI18N(vue) {
+  vue.use(VueI18n);
+  return new VueI18n({
+    silentTranslationWarn: true,
+    formatter: new JhiFormatter()
+  });
+}
+&nbsp;
+export function initVueXStore(vue) {
+  vue.use(Vuex);
+  return new Vuex.Store({
+    state: {
+      dismissSecs: 0,
+      dismissCountDown: 0,
+      alertType: '',
+      alertMessage: {},
+      logon: false,
+      userIdentity: null,
+      authenticated: false,
+      currentLanguage: 'en',
+      languages: {
+        en: { name: 'English' }
+        // jhipster-needle-i18n-language-key-pipe - JHipster will add/remove languages in this object
+      }
+    },
+    mutations: {
+      initAlert<span class="fstat-no" title="function not covered" >(</span>state) {
+<span class="cstat-no" title="statement not covered" >        state.dismissSecs = 0;</span>
+<span class="cstat-no" title="statement not covered" >        state.dismissCountDown = 0;</span>
+<span class="cstat-no" title="statement not covered" >        state.alertType = '';</span>
+<span class="cstat-no" title="statement not covered" >        state.alertMessage = {};</span>
+      },
+      setAlertType<span class="fstat-no" title="function not covered" >(</span>state, alertType) {
+<span class="cstat-no" title="statement not covered" >        state.alertType = alertType;</span>
+      },
+      setAlertMessage<span class="fstat-no" title="function not covered" >(</span>state, alertMessage) {
+<span class="cstat-no" title="statement not covered" >        state.dismissSecs = 5;</span>
+<span class="cstat-no" title="statement not covered" >        state.dismissCountDown = 5;</span>
+<span class="cstat-no" title="statement not covered" >        state.alertMessage = alertMessage;</span>
+      },
+      countDownChanged<span class="fstat-no" title="function not covered" >(</span>state, newCountDown) {
+<span class="cstat-no" title="statement not covered" >        state.dismissCountDown = newCountDown;</span>
+      },
+      currentLanguage(state, newLanguage) {
+        state.currentLanguage = newLanguage;
+      },
+      authenticate(state) {
+        state.logon = true;
+      },
+      authenticated(state, identity) {
+        state.userIdentity = identity;
+        state.authenticated = true;
+        state.logon = false;
+      },
+      logout(state) {
+        state.userIdentity = null;
+        state.authenticated = false;
+        state.logon = false;
+      }
+    },
+    getters: {
+      dismissSecs: <span class="fstat-no" title="function not covered" >state =&gt; <span class="cstat-no" title="statement not covered" >state.dismissSecs,</span></span>
+      dismissCountDown: <span class="fstat-no" title="function not covered" >state =&gt; <span class="cstat-no" title="statement not covered" >state.dismissCountDown,</span></span>
+      alertType: <span class="fstat-no" title="function not covered" >state =&gt; <span class="cstat-no" title="statement not covered" >state.alertType,</span></span>
+      alertMessage: <span class="fstat-no" title="function not covered" >state =&gt; <span class="cstat-no" title="statement not covered" >state.alertMessage,</span></span>
+      currentLanguage: state =&gt; state.currentLanguage,
+      languages: state =&gt; state.languages,
+      logon: state =&gt; state.logon,
+      account: state =&gt; state.userIdentity,
+      authenticated: <span class="fstat-no" title="function not covered" >state =&gt; <span class="cstat-no" title="statement not covered" >state.authenticated</span></span>
+    }
+  });
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jan 11 2019 15:12:10 GMT+0100 (heure normale d’Europe centrale)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

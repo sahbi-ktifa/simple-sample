@@ -1,0 +1,210 @@
+<testsuites name="jest tests" tests="85" failures="0" time="13.298">
+  <testsuite name="Health Service" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:11:57" time="3.921" tests="5">
+    <testcase classname="Health Service transformHealthData should flatten empty health data" name="Health Service transformHealthData should flatten empty health data" time="0.007">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with no subsystems" name="Health Service transformHealthData should flatten health data with no subsystems" time="0.002">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has no additional information" name="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has no additional information" time="0.001">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional information" name="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional information" time="0.001">
+    </testcase>
+    <testcase classname="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional error" name="Health Service transformHealthData should flatten health data with subsystems at level 1, main system has additional error" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserManagement Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:01" time="5.354" tests="5">
+    <testcase classname="UserManagement Component should be a Vue instance" name="UserManagement Component should be a Vue instance" time="0.036">
+    </testcase>
+    <testcase classname="UserManagement Component OnInit Should call load all on init" name="UserManagement Component OnInit Should call load all on init" time="0.012">
+    </testcase>
+    <testcase classname="UserManagement Component setActive Should update user and call load all" name="UserManagement Component setActive Should update user and call load all" time="0.02">
+    </testcase>
+    <testcase classname="UserManagement Component confirmDelete Should call delete service on confirmDelete" name="UserManagement Component confirmDelete Should call delete service on confirmDelete" time="0.01">
+    </testcase>
+    <testcase classname="UserManagement Component change order should change order and invert reverse" name="UserManagement Component change order should change order and invert reverse" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="Register Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:11:57" time="9.329" tests="8">
+    <testcase classname="Register Component should be a Vue instance" name="Register Component should be a Vue instance" time="0.036">
+    </testcase>
+    <testcase classname="Register Component should set all default values correctly" name="Register Component should set all default values correctly" time="0.013">
+    </testcase>
+    <testcase classname="Register Component should open login modal when asked to" name="Register Component should open login modal when asked to" time="0.013">
+    </testcase>
+    <testcase classname="Register Component should set error when passwords do no match" name="Register Component should set error when passwords do no match" time="0.025">
+    </testcase>
+    <testcase classname="Register Component should register when password match" name="Register Component should register when password match" time="0.025">
+    </testcase>
+    <testcase classname="Register Component should register when password match but throw error when login already exist" name="Register Component should register when password match but throw error when login already exist" time="0.019">
+    </testcase>
+    <testcase classname="Register Component should register when password match but throw error when email already used" name="Register Component should register when password match but throw error when email already used" time="0.016">
+    </testcase>
+    <testcase classname="Register Component should register when password match but throw error" name="Register Component should register when password match but throw error" time="0.029">
+    </testcase>
+  </testsuite>
+  <testsuite name="Audits Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:07" time="0.425" tests="5">
+    <testcase classname="Audits Component should be a Vue instance" name="Audits Component should be a Vue instance" time="0.02">
+    </testcase>
+    <testcase classname="Audits Component today function  should set toDate to current date" name="Audits Component today function  should set toDate to current date" time="0.006">
+    </testcase>
+    <testcase classname="Audits Component previousMonth function  should set fromDate to current date" name="Audits Component previousMonth function  should set fromDate to current date" time="0.006">
+    </testcase>
+    <testcase classname="Audits Component By default, on init should set all default values correctly" name="Audits Component By default, on init should set all default values correctly" time="0.007">
+    </testcase>
+    <testcase classname="Audits Component OnInit Should call load all on init" name="Audits Component OnInit Should call load all on init" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="Settings Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:07" time="0.488" tests="6">
+    <testcase classname="Settings Component should be a Vue instance" name="Settings Component should be a Vue instance" time="0.017">
+    </testcase>
+    <testcase classname="Settings Component should send the current identity upon save" name="Settings Component should send the current identity upon save" time="0.017">
+    </testcase>
+    <testcase classname="Settings Component should notify of success upon successful save" name="Settings Component should notify of success upon successful save" time="0.012">
+    </testcase>
+    <testcase classname="Settings Component should notify of error upon failed save" name="Settings Component should notify of error upon failed save" time="0.01">
+    </testcase>
+    <testcase classname="Settings Component should notify of error upon error 400" name="Settings Component should notify of error upon error 400" time="0.009">
+    </testcase>
+    <testcase classname="Settings Component should notify of error upon email already used" name="Settings Component should notify of error upon email already used" time="0.014">
+    </testcase>
+  </testsuite>
+  <testsuite name="Health Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:07" time="0.391" tests="8">
+    <testcase classname="Health Component should be a Vue instance" name="Health Component should be a Vue instance" time="0.019">
+    </testcase>
+    <testcase classname="Health Component baseName and subSystemName should return the basename when it has no sub system" name="Health Component baseName and subSystemName should return the basename when it has no sub system" time="0.006">
+    </testcase>
+    <testcase classname="Health Component baseName and subSystemName should return the basename when it has sub systems" name="Health Component baseName and subSystemName should return the basename when it has sub systems" time="0.005">
+    </testcase>
+    <testcase classname="Health Component baseName and subSystemName should return the sub system name" name="Health Component baseName and subSystemName should return the sub system name" time="0.004">
+    </testcase>
+    <testcase classname="Health Component baseName and subSystemName should return the subsystem when it has multiple keys" name="Health Component baseName and subSystemName should return the subsystem when it has multiple keys" time="0.005">
+    </testcase>
+    <testcase classname="Health Component getBadgeClass should get badge class" name="Health Component getBadgeClass should get badge class" time="0.005">
+    </testcase>
+    <testcase classname="Health Component refresh should call refresh on init" name="Health Component refresh should call refresh on init" time="0.006">
+    </testcase>
+    <testcase classname="Health Component refresh should handle a 503 on refreshing health data" name="Health Component refresh should handle a 503 on refreshing health data" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserManagementEdit Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:07" time="0.528" tests="5">
+    <testcase classname="UserManagementEdit Component should be a Vue instance" name="UserManagementEdit Component should be a Vue instance" time="0.027">
+    </testcase>
+    <testcase classname="UserManagementEdit Component init Should load user" name="UserManagementEdit Component init Should load user" time="0.018">
+    </testcase>
+    <testcase classname="UserManagementEdit Component initAuthorities Should load authorities" name="UserManagementEdit Component initAuthorities Should load authorities" time="0.015">
+    </testcase>
+    <testcase classname="UserManagementEdit Component save Should call update service on save for existing user" name="UserManagementEdit Component save Should call update service on save for existing user" time="0.015">
+    </testcase>
+    <testcase classname="UserManagementEdit Component save Should call create service on save for new user" name="UserManagementEdit Component save Should call create service on save for new user" time="0.019">
+    </testcase>
+  </testsuite>
+  <testsuite name="ChangePassword Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:07" time="0.43" tests="4">
+    <testcase classname="ChangePassword Component should be a Vue instance" name="ChangePassword Component should be a Vue instance" time="0.015">
+    </testcase>
+    <testcase classname="ChangePassword Component should show error if passwords do not match" name="ChangePassword Component should show error if passwords do not match" time="0.012">
+    </testcase>
+    <testcase classname="ChangePassword Component should call Auth.changePassword when passwords match and  set success to OK upon success" name="ChangePassword Component should call Auth.changePassword when passwords match and  set success to OK upon success" time="0.013">
+    </testcase>
+    <testcase classname="ChangePassword Component should notify of error if change password fails" name="ChangePassword Component should notify of error if change password fails" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginForm Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:08" time="0.34" tests="3">
+    <testcase classname="LoginForm Component should be a Vue instance" name="LoginForm Component should be a Vue instance" time="0.009">
+    </testcase>
+    <testcase classname="LoginForm Component should not store token if authentication is KO" name="LoginForm Component should not store token if authentication is KO" time="0.011">
+    </testcase>
+    <testcase classname="LoginForm Component should store token if authentication is OK" name="LoginForm Component should store token if authentication is OK" time="0.095">
+    </testcase>
+  </testsuite>
+  <testsuite name="Metrics Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:08" time="0.601" tests="4">
+    <testcase classname="Metrics Component should be a Vue instance" name="Metrics Component should be a Vue instance" time="0.019">
+    </testcase>
+    <testcase classname="Metrics Component refresh should call refresh on init" name="Metrics Component refresh should call refresh on init" time="0.022">
+    </testcase>
+    <testcase classname="Metrics Component isNan should return if a variable is NaN" name="Metrics Component isNan should return if a variable is NaN" time="0.011">
+    </testcase>
+    <testcase classname="Metrics Component Thread dump method should return Thread Dump" name="Metrics Component Thread dump method should return Thread Dump" time="0.017">
+    </testcase>
+  </testsuite>
+  <testsuite name="Metrics Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:08" time="0.181" tests="7">
+    <testcase classname="Metrics Component should be a Vue instance" name="Metrics Component should be a Vue instance" time="0.007">
+    </testcase>
+    <testcase classname="Metrics Component init should count the numbers of each thread type" name="Metrics Component init should count the numbers of each thread type" time="0.033">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-success for RUNNABLE" name="Metrics Component getBadgeClass should return badge-success for RUNNABLE" time="0.005">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-info for WAITING" name="Metrics Component getBadgeClass should return badge-info for WAITING" time="0.003">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-warning for TIMED_WAITING" name="Metrics Component getBadgeClass should return badge-warning for TIMED_WAITING" time="0.003">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return badge-danger for BLOCKED" name="Metrics Component getBadgeClass should return badge-danger for BLOCKED" time="0.003">
+    </testcase>
+    <testcase classname="Metrics Component getBadgeClass should return undefined for anything else" name="Metrics Component getBadgeClass should return undefined for anything else" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Reset Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:08" time="0.253" tests="4">
+    <testcase classname="Reset Component should be a Vue instance" name="Reset Component should be a Vue instance" time="0.012">
+    </testcase>
+    <testcase classname="Reset Component should reset request be a success" name="Reset Component should reset request be a success" time="0.006">
+    </testcase>
+    <testcase classname="Reset Component should reset request fail as an error" name="Reset Component should reset request fail as an error" time="0.007">
+    </testcase>
+    <testcase classname="Reset Component should reset request fail as an email not existing error" name="Reset Component should reset request fail as an email not existing error" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Configuration Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:08" time="0.299" tests="4">
+    <testcase classname="Configuration Component should be a Vue instance" name="Configuration Component should be a Vue instance" time="0.006">
+    </testcase>
+    <testcase classname="Configuration Component OnRouteEnter should set all default values correctly" name="Configuration Component OnRouteEnter should set all default values correctly" time="0.005">
+    </testcase>
+    <testcase classname="Configuration Component OnRouteEnter Should call load all on init" name="Configuration Component OnRouteEnter Should call load all on init" time="0.004">
+    </testcase>
+    <testcase classname="Configuration Component keys method should return the keys of an Object" name="Configuration Component keys method should return the keys of an Object" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserManagementView Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:09" time="0.213" tests="2">
+    <testcase classname="UserManagementView Component should be a Vue instance" name="UserManagementView Component should be a Vue instance" time="0.003">
+    </testcase>
+    <testcase classname="UserManagementView Component OnInit Should call load all on init" name="UserManagementView Component OnInit Should call load all on init" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="Logs Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:09" time="0.277" tests="5">
+    <testcase classname="Logs Component should be a Vue instance" name="Logs Component should be a Vue instance" time="0.006">
+    </testcase>
+    <testcase classname="Logs Component OnInit should set all default values correctly" name="Logs Component OnInit should set all default values correctly" time="0.004">
+    </testcase>
+    <testcase classname="Logs Component OnInit Should call load all on init" name="Logs Component OnInit Should call load all on init" time="0.003">
+    </testcase>
+    <testcase classname="Logs Component change log level should change log level correctly" name="Logs Component change log level should change log level correctly" time="0.004">
+    </testcase>
+    <testcase classname="Logs Component change order should change order and invert reverse" name="Logs Component change order should change order and invert reverse" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Activate Component" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:09" time="0.237" tests="3">
+    <testcase classname="Activate Component should be a Vue instance" name="Activate Component should be a Vue instance" time="0.003">
+    </testcase>
+    <testcase classname="Activate Component should display error when activation fails" name="Activate Component should display error when activation fails" time="0.003">
+    </testcase>
+    <testcase classname="Activate Component should display success when activation succeeds" name="Activate Component should display success when activation succeeds" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Ribbon" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:09" time="0.176" tests="5">
+    <testcase classname="Ribbon should be a Vue instance" name="Ribbon should be a Vue instance" time="0.003">
+    </testcase>
+    <testcase classname="Ribbon should not have ribbonEnv when no data" name="Ribbon should not have ribbonEnv when no data" time="0.002">
+    </testcase>
+    <testcase classname="Ribbon should not have ribbonEnv when no activeProfiles" name="Ribbon should not have ribbonEnv when no activeProfiles" time="0.002">
+    </testcase>
+    <testcase classname="Ribbon should not have ribbonEnv when empty activeProfiles" name="Ribbon should not have ribbonEnv when empty activeProfiles" time="0.001">
+    </testcase>
+    <testcase classname="Ribbon should not have ribbonEnv when empty activeProfiles" name="Ribbon should not have ribbonEnv when empty activeProfiles" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="JhiFooter" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:09" time="0.172" tests="1">
+    <testcase classname="JhiFooter should be a Vue instance" name="JhiFooter should be a Vue instance" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="JhiDocs" errors="0" failures="0" skipped="0" timestamp="2019-01-11T14:12:09" time="0.145" tests="1">
+    <testcase classname="JhiDocs should be a Vue instance" name="JhiDocs should be a Vue instance" time="0.004">
+    </testcase>
+  </testsuite>
+</testsuites>
